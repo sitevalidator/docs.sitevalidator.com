@@ -1,0 +1,8 @@
+site_name: Site Validator Documentation
+theme: ""
+theme_dir: readthedocs/
+pages:
+- [index.md, Home]
+- [site-wide-validation.md, Site-Wide Validation]
+- [validating-your-local-server.md, Validating your Local Server]
+- [continuous-validation.md, Continuous Validation]
