@@ -6,7 +6,7 @@ Continous Validation lets you run automatic validations on your sites when a new
 
 ## Setting up a Deploy Validator
 
-To set up automatic validations for your sites, the first thing needed is defining what validations should be run. We can define one or several validations to be fired, in this example we're specifying that a site should validate HTML on up to 100 pages and CSS on up to 5 pages:
+To set up automatic validations for your sites, you should first define what validations should be run. We can define one or several validations to be started, in this example we're specifying that a site should validate HTML on up to 100 pages and CSS on up to 5 pages:
 
 ![New deploy validator form](img/new-deploy-validator-form.png)
 
@@ -20,7 +20,7 @@ On the following examples, we'll suppose the deploy validator you defined has th
 https://app.sitevalidator.com/u/abcde/d/12345
 ```
 
-### Example: curl
+## Example: curl
 
 [curl](http://curl.haxx.se/) is a command-line tool, present in most systems, that you can use to make a quick check from your terminal:
 
@@ -28,13 +28,13 @@ https://app.sitevalidator.com/u/abcde/d/12345
 $ curl -X POST -d '' https://app.sitevalidator.com/u/abcde/d/12345
 ```
 
-### Example: Netlify
+## Example: Netlify
 
 [Netlify](https://www.netlify.com/) is a hosting platform for static websites, and offers the simplest integration possible. You just need to paste your deploy validator URL into the Notifications section of your site, like this:
 
 ![Netlify integration](img/netlify-integration.png)
 
-### Example: Heroku
+## Example: Heroku
 
 If your site is on Heroku, you can use the [free HTTP post hook add-on](https://devcenter.heroku.com/articles/deploy-hooks#http-post-hook), like this:
 
@@ -43,7 +43,7 @@ $ heroku addons:add deployhooks:http \
   --url https://app.sitevalidator.com/u/abcde/d/12345
 ```
 
-### Example: Cloud 66
+## Example: Cloud 66
 
 If your site is on Cloud 66, you can use their [free deploy hooks](http://help.cloud66.com/deployment/deploy-hooks) to define your hooks per environment on a file named .cloud66/deploy_hooks.yml, like this:
 
@@ -55,7 +55,7 @@ staging:
       run_on: single_server
 ```
 
-### Other platforms
+## Other platforms
 
 If your hosting platform is not listed here, feel free to [contact us](support@sitevalidator.com) and we'll help you with the integration.
 

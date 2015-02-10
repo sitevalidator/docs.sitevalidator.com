@@ -9,10 +9,10 @@ To validate HTML and/or CSS on a site, all you need to do is specify the startin
 To validate a site, you can define:
 
 * **Starting URL**. Our validation spider will visit this URL and its direct internal links, and validate those pages. Typically, you can enter the main URL of the site to validate, but it can be any URL from your site, or an XML sitemap.
-* **Max. pages**. The maximum number of pages to validate. There's a hard limit of 2,000 pages per each site validation, but you'll typically want to set a much lower limit.
-* **Deep link scraping**. By default, the validation spider will follow the internal links found, discovering more pages, until the max pages limit is reached or no more pages are found. This provides an easy way to submit a large site, but it's also slower than specifying exactly the URLs to validate with an XML sitemap.
+* **Max. pages**. The maximum number of pages to validate. There's a limit of 2,000 pages per each site validation, but you'll typically want to set a much lower limit.
+* **Deep link scraping**. By default, the validation spider will follow all internal links found, discovering more pages, until the max pages limit is reached or no more pages are found. This provides an easy way to submit a large site, but it's also slower than specifying exactly the URLs to validate with an XML sitemap.
 * **HTML validation**. If enabled, each page will be validated for HTML conformance using the W3C validation software.
-* **CSS validation**. If enabled, each page will be validated for CSS conformance using the W3C validation software.
+* **CSS validation**. If enabled, each page will be validated for CSS conformance using the W3C validation software. This will validate both inline styles and the linked stylesheets for each page.
 
 ## Performance tips
 
@@ -55,6 +55,6 @@ While it's tempting to try to validate sites in its entirety, in most cases that
 
 ### Validate HTML and CSS separately
 
-If you're validating CSS, consider again that most of the pages will be using the same stylesheets, so it's unnecessary to validate hundreds of pages for CSS. Consider validating just a small set of pages.
+If you're validating CSS, most of the pages will be using the same stylesheets, so it's unnecessary to validate hundreds of pages for CSS. Consider validating just a small set of pages.
 
 Also, you can check HTML and CSS separately. For example, if you have a 300-page site, you could validate HTML on 300 pages (or less), and CSS on 5 pages (or probably, just 1 page!).
