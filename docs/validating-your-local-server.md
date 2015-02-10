@@ -13,7 +13,7 @@ There's an easy way to do that, thanks to tools like [ngrok](https://ngrok.com/)
 
 In case you aren't using a web server locally, say, you're working directly on static files, you can easily launch a web server in your local directory thanks to tools like [Serve](http://get-serve.com/):
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/GOUNTa8ME2o" frameborder="0" allowfullscreen style="margin-bottom: 30px;"></iframe>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/GOUNTa8ME2o" allowfullscreen style="margin-bottom: 30px;"></iframe>
 
 ## Example
 

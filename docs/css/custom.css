@@ -41,3 +41,5 @@ table {
 h2 { margin-top: 14px; }
 
 code { font-size: 1.2em !important; }
+
+iframe { border: 0; }

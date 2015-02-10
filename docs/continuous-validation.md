@@ -2,7 +2,7 @@
 
 Continous Validation lets you run automatic validations on your sites when a new version is deployed.
 
-<iframe src="//fast.wistia.net/embed/iframe/w2xu1aedtf?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="720" height="478"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js"></script>
+<iframe src="//fast.wistia.net/embed/iframe/w2xu1aedtf?videoFoam=true" allowtransparency="true" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="720" height="478"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js"></script>
 
 ## Setting up a Deploy Validator
 
@@ -57,7 +57,7 @@ staging:
 
 ## Other platforms
 
-If your hosting platform is not listed here, feel free to [contact us](support@sitevalidator.com) and we'll help you with the integration.
+If your hosting platform is not listed here, feel free to [contact us](mailto:support@sitevalidator.com) and we'll help you with the integration.
 
 ## Pausing a validator
 
