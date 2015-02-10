@@ -16,8 +16,8 @@ Once you've defined your deploy validator, you can tell your hosting platform to
 
 On the following examples, we'll suppose the deploy validator you defined has this URL:
 
-```bash
-https://app.sitevalidator.com/u/abcde/d/12345
+```
+https://app.sitevalidator.com/u/abc/d/efg
 ```
 
 ## Example: curl
@@ -25,7 +25,7 @@ https://app.sitevalidator.com/u/abcde/d/12345
 [curl](http://curl.haxx.se/) is a command-line tool, present in most systems, that you can use to make a quick check from your terminal:
 
 ```bash
-$ curl -X POST -d '' https://app.sitevalidator.com/u/abcde/d/12345
+$ curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg
 ```
 
 ## Example: Netlify
@@ -40,7 +40,7 @@ If your site is on Heroku, you can use the [free HTTP post hook add-on](https://
 
 ```bash
 $ heroku addons:add deployhooks:http \
-  --url https://app.sitevalidator.com/u/abcde/d/12345
+  --url https://app.sitevalidator.com/u/abc/d/efg
 ```
 
 ## Example: Cloud 66
@@ -50,7 +50,7 @@ If your site is on Cloud 66, you can use their [free deploy hooks](http://help.c
 ```yml
 staging:
   last_thing:
-    - command: curl -X POST -d '' https://app.sitevalidator.com/u/abcde/d/12345
+    - command: curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg
       target: rails
       run_on: single_server
 ```

@@ -3,6 +3,7 @@ site_description: Site validator validates HTML and CSS on large sites
 repo_url: https://github.com/sitevalidator/docs.sitevalidator.com
 extra_css:
   - /css/custom.css
+  - /css/highlight/monokai_sublime.css
 theme: ""
 theme_dir: readthedocs/
 pages:
