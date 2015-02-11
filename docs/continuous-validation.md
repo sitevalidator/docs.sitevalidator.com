@@ -34,6 +34,8 @@ $ curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg
 
 ![Netlify integration](img/netlify-integration.png)
 
+Currently, Netlify only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using [deploy hook forker](https://github.com/deadlyicon/deploy-hook-forker).
+
 ## Example: Heroku
 
 If your site is on Heroku, you can use the [free HTTP post hook add-on](https://devcenter.heroku.com/articles/deploy-hooks#http-post-hook), like this:
@@ -42,6 +44,8 @@ If your site is on Heroku, you can use the [free HTTP post hook add-on](https://
 $ heroku addons:add deployhooks:http \
   --url https://app.sitevalidator.com/u/abc/d/efg
 ```
+
+Heroku only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using [deploy hook forker](https://github.com/deadlyicon/deploy-hook-forker).
 
 ## Example: Cloud 66
 
@@ -53,6 +57,19 @@ staging:
     - command: curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg
       target: rails
       run_on: single_server
+```
+
+Cloud 66 lets you have several deploy hooks defined. The syntax for doing that is:
+
+```yml
+environment:
+  last_thing:
+    - xxxxxx
+      yyyyyy
+      zzzzzz
+    - xxxxxx
+      yyyyyy
+      zzzzzz
 ```
 
 ## Other platforms
