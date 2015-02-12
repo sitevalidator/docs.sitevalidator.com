@@ -69,7 +69,7 @@ staging:
       run_on: single_server
 ```
 
-Cloud 66 lets you have several deploy hooks defined. The syntax for doing that is:
+Cloud 66 let you have several deploy hooks defined. The syntax for doing that is:
 
 ```yml
 environment:
@@ -88,6 +88,7 @@ environment:
 
 ![Github Pages integration](img/github-pages-integration.png)
 
+Github Pages lets you define several deploy hooks for different services.
 
 ## Other platforms
 
