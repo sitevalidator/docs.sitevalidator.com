@@ -47,9 +47,17 @@ $ heroku addons:add deployhooks:http \
 
 Heroku only allows one HTTP deploy hook per app, so if you need to trigger several hooks, you can set it up using [deploy hook forker](https://github.com/deadlyicon/deploy-hook-forker).
 
+## Example: Engine Yard
+
+Engine Yard lets you define [deploy hooks using simple ruby scripts](https://support.cloud.engineyard.com/entries/21016568-use-ruby-deploy-hooks). To trigger a site validation, you can create a **deploy/after_restart.rb** file on the root folder of your app, that sends the post-deploy hook using curl like this:
+
+```ruby
+run "curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg"
+```
+
 ## Example: Cloud 66
 
-If your site is on Cloud 66, you can use their [free deploy hooks](http://help.cloud66.com/deployment/deploy-hooks) to define your hooks per environment on a file named .cloud66/deploy_hooks.yml, like this:
+If your site is on Cloud 66, you can use their [free deploy hooks](http://help.cloud66.com/deployment/deploy-hooks) to define your hooks per environment on a file named **.cloud66/deploy_hooks.yml**, like this:
 
 ```yml
 staging:
