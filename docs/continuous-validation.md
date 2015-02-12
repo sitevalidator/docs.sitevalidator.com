@@ -55,6 +55,8 @@ Engine Yard lets you define [deploy hooks using simple ruby scripts](https://sup
 run "curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg"
 ```
 
+Engine Yard lets you use several deploy hooks for your apps, just include them on the same file.
+
 ## Example: Cloud 66
 
 If your site is on Cloud 66, you can use their [free deploy hooks](http://help.cloud66.com/deployment/deploy-hooks) to define your hooks per environment on a file named **.cloud66/deploy_hooks.yml**, like this:
