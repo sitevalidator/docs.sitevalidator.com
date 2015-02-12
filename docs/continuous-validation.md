@@ -82,6 +82,13 @@ environment:
       zzzzzz
 ```
 
+## Example: Github Pages
+
+[Github Pages](https://pages.github.com/) let you define webhooks for different events. You just need to enter your deploy validator URL in the Payload URL field, and choose the individual event for **page build**:
+
+![Github Pages integration](img/github-pages-integration.png)
+
+
 ## Other platforms
 
 If your hosting platform is not listed here, feel free to [contact us](mailto:support@sitevalidator.com) and we'll help you with the integration.
