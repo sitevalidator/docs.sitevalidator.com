@@ -1,20 +1,24 @@
 # Continuous Validation
 
-Continous Validation lets you run automatic validations on your sites when a new version is deployed.
+You can set up automatic validations for your sites, to be run periodically or triggered when a deploy hook is received.
 
-<iframe src="//fast.wistia.net/embed/iframe/w2xu1aedtf?videoFoam=true" allowtransparency="true" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="720" height="478"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js"></script>
+## Setting up an Automatic Validation
 
-## Setting up a Deploy Validator
+When you set up an automatic validation, you can specify an schedule for it. This is optional and can be set to be daily, weekly or monthly, specifying as well the exact day (of the week or month) and the hour.
 
-To set up automatic validations for your sites, you should first define what validations should be run. We can define one or several validations to be started, in this example we're specifying that a site should validate HTML on up to 100 pages and CSS on up to 5 pages:
+Then, you can define one or several validations to be started. In this example we're specifying that a site should validate HTML on up to 100 pages and CSS on up to 5 pages, every tuesday at 09:00 AM.
 
-![New deploy validator form](img/new-deploy-validator-form.png)
+![New automatic validator form](img/new-deploy-validator-form.png)
 
 ## Setting up a Deploy Notification
 
-Once you've defined your deploy validator, you can tell your hosting platform to notify us when a new version of your site is deployed. Basically, it's as simple as letting them know the URL of the deploy validator you just defined.
+Continous Validation lets you also run automatic validations on your sites when a new version is deployed.
 
-On the following examples, we'll suppose the deploy validator you defined has this URL:
+<iframe src="//fast.wistia.net/embed/iframe/w2xu1aedtf?videoFoam=true" allowtransparency="true" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="720" height="478"></iframe><script src="//fast.wistia.net/assets/external/E-v1.js"></script>
+
+Once you've defined your automatic validator, you can tell your hosting platform to notify us when a new version of your site is deployed. Basically, it's as simple as letting them know the URL of the automatic validator you just defined.
+
+On the following examples, we'll suppose the automatic validator you defined has this URL:
 
 ```
 https://app.sitevalidator.com/u/abc/d/efg
@@ -30,7 +34,7 @@ $ curl -X POST -d '' https://app.sitevalidator.com/u/abc/d/efg
 
 ## Example: Netlify
 
-[Netlify](https://www.netlify.com/) is a hosting platform for static websites, and offers the simplest integration possible. You just need to paste your deploy validator URL into the Notifications section of your site, like this:
+[Netlify](https://www.netlify.com/) is a hosting platform for static websites, and offers the simplest integration possible. You just need to paste your automatic validator URL into the Notifications section of your site, like this:
 
 ![Netlify integration](img/netlify-integration.png)
 
@@ -84,7 +88,7 @@ environment:
 
 ## Example: Github Pages
 
-[Github Pages](https://pages.github.com/) let you define webhooks for different events. You just need to enter your deploy validator URL in the Payload URL field, and choose the individual event for **page build**:
+[Github Pages](https://pages.github.com/) let you define webhooks for different events. You just need to enter your automatic validator URL in the Payload URL field, and choose the individual event for **page build**:
 
 ![Github Pages integration](img/github-pages-integration.png)
 
@@ -96,12 +100,12 @@ If your hosting platform is not listed here, feel free to [contact us](mailto:su
 
 ## Pausing a validator
 
-You can pause a deploy validator, so that it will not fire any validations until you re-activate it.
+You can pause a automatic validator, so that it will not fire any validations until you re-activate it.
 
 ## Response status codes
 
 When a deploy notification is received, Site Validator will return one of these possible status codes:
 
 * **201 Created**. All went well and the site validations were initiated.
-* **404 Not Found**. The deploy validator was not found. You might have typed it incorrectly, or removed it. When a deploy validator is paused, a 404 will be returned.
-* **400 Bad Request**. The deploy validator was found, but site validations could not be started. Normally, this means you have run out of validation credits.
+* **404 Not Found**. The automatic validator was not found. You might have typed it incorrectly, or removed it. When a automatic validator is paused, a 404 will be returned.
+* **400 Bad Request**. The automatic validator was found, but site validations could not be started. Normally, this means you have run out of validation credits.
