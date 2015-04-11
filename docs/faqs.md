@@ -4,9 +4,11 @@
 
 Site Validator is a site-wide markup validation tool. It allows you to check the validity of the markup of several pages from your website, and gives you a summary of the most common errors and warnings, with a single click.
 
-## Why not just use the official W3C validators?
+## Why not just use the official W3C / Google validators?
 
-When you need to validate the HTML and CSS markup of a big site, submitting each of its individual pages on the W3C <a href="http://validator.w3.org/">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/">CSS</a> validators is a slow process. Site Validator provides a simpler, faster way to validate several pages at once. Just enter your main URL and our spider will take care of crawling your site in search for pages to validate.
+When you need to validate the HTML, Accessibility and CSS markup of a big site, submitting each of its individual pages on the W3C <a href="http://validator.w3.org/">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/">CSS</a> validators, or using the <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb">Google Chrome Accessibility Developer Tools</a> extension on each individual page is a slow process.
+
+Site Validator provides a simpler, faster way to validate several pages at once. Just enter your main URL and our spider will take care of crawling your site in search for pages to validate.
 
 Also, Site Validator gives you a summary report with the grouped common errors, so you can get a big picture of what's going wrong on the markup of the site.
 
