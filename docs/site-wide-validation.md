@@ -25,7 +25,19 @@ We use the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/), h
 
 ## Accessibility Validation
 
-We use Google Chrome's [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules), hosted on our own servers, for Accessibility checking.
+Site Validator lets you validate Accessibility on large sites by integrating with two of the leading tools in A11Y validation: <a href="http://tenon.io">Tenon</a> and Google's <a href="https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules">Accessibility Developer Tools</a>.
+
+### Tenon integration
+
+Tenon is the most complete A11Y checker, and currently implements 90 different checks. See <a href="http://tenon.io/documentation/what-tenon-tests.php">What Tenon Tests</a> for a comprehensive list of its current and planned checks.
+
+Tenon is a paid service (<a href="http://tenon.io/pricing.php">see pricing</a>) so to integrate it into your Site Validator account you'll need to register in order to get a <a href="http://tenon.io/apikey.php">Tenon API Key</a>. When you've got one, you just need to <a href="https://app.sitevalidator.com/users/edit">enter it into your Site Validator account</a>.
+
+Tenon has a free tier but as it's limited to 50 checks per month you're encouraged to upgrade to a larger plan to be able to validate large sites.
+
+### Accessibility Developer Tools
+
+If you don't have a Tenon API Key you can still check Accessibility on your sites thanks to our integration with Google Chrome's [Accessibility Developer Tools](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules), hosted on our own servers, for Accessibility checking.
 
 For full descriptions of the audit rules, visit the [Accessibility Developer Tools project wiki](https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules).
 
