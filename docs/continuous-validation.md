@@ -45,7 +45,7 @@ Currently, Netlify only allows one HTTP deploy hook per app, so if you need to t
 If your site is on Heroku, you can use the [free HTTP post hook add-on](https://devcenter.heroku.com/articles/deploy-hooks#http-post-hook), like this:
 
 ```bash
-$ heroku addons:add deployhooks:http \
+$ heroku addons:create deployhooks:http \
   --url https://app.sitevalidator.com/u/abc/d/efg
 ```
 
